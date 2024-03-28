@@ -1,0 +1,9 @@
+# Compilation artifacts
+debug/
+target/
+
+# rustfmt artifacts
+**/*.rs.bk
+
+# MSVC artifacts
+*.pdb
