@@ -1,0 +1,19 @@
+name: Tests
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  Tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Validate format
+        run: cargo fmt -- --check
+      - name: Run Clippy
+        run: cargo clippy
+      - name: Run tests
+        run: cargo test
